@@ -88,7 +88,8 @@ class CategoricalAbstraction:
             # Otherwise we identify the time points at which we observe the value.
             else:
                
-                timestamp_rows = data_table[data_table[pattern[0]] > 0].index.values.tolist()
+                timestamp_rows = data_table[data_table[pattern[0]] > 0].index.tolist()
+                print(data_table.index)
                
                 times = [data_table.index.get_loc(i) for i in timestamp_rows]
                 self.cache[self.to_string(pattern)] = times

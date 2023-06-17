@@ -41,7 +41,7 @@ class ClassificationAlgorithms:
         if gridsearch:
             # With the current parameters for max_iter and Python 3 packages convergence is not always reached, therefore increased +1000.
             tuned_parameters = [{'hidden_layer_sizes': [(5,), (10,), (25,), (100,), (100,5,), (100,10,),], 'activation': [activation],
-                                 'learning_rate': [learning_rate], 'max_iter': [2000, 3000], 'alpha': [alpha]}]
+                                 'learning_rate': [learning_rate], 'max_iter': [5000, 5000], 'alpha': [alpha]}]
             nn = GridSearchCV(MLPClassifier(), tuned_parameters, cv=5, scoring='accuracy')
         else:
             # Create the model

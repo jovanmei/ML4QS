@@ -1,4 +1,4 @@
-from util.util import get_chapter
+# from util.util import get_chapter
 
 import matplotlib.colors as cl
 import matplotlib.pyplot as plt
@@ -136,7 +136,7 @@ class VisualizeDataset:
 
     def plot_dataset_boxplot(self, dataset, cols):
         plt.Figure(); dataset[cols].plot.box()
-        plt.ylim([-30,30])
+        plt.ylim([-150,150])
         self.save(plt)
         plt.show()
 

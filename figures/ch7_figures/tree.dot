@@ -1,0 +1,24 @@
+digraph Tree {
+node [shape=box] ;
+0 [label="acc_phone_x_temp_std_ws_120 <= 0.347\ngini = 0.633\nsamples = 955\nvalue = [114, 104, 509, 228]\nclass = labelsit"] ;
+1 [label="gini = 0.0\nsamples = 509\nvalue = [0, 0, 509, 0]\nclass = labelsit"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="pca_5_temp_std_ws_120 <= 0.058\ngini = 0.619\nsamples = 446\nvalue = [114, 104, 0, 228]\nclass = labelwalk"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+3 [label="gyr_phone_y_temp_std_ws_120 <= 0.972\ngini = 0.009\nsamples = 229\nvalue = [0, 1, 0, 228]\nclass = labelwalk"] ;
+2 -> 3 ;
+4 [label="gini = 0.0\nsamples = 227\nvalue = [0, 0, 0, 227]\nclass = labelwalk"] ;
+3 -> 4 ;
+5 [label="gini = 0.5\nsamples = 2\nvalue = [0, 1, 0, 1]\nclass = labelrun"] ;
+3 -> 5 ;
+6 [label="gyr_phone_y_temp_std_ws_120 <= 1.604\ngini = 0.499\nsamples = 217\nvalue = [114, 103, 0, 0]\nclass = labelride"] ;
+2 -> 6 ;
+7 [label="pca_5_temp_std_ws_120 <= 0.068\ngini = 0.05\nsamples = 117\nvalue = [114, 3, 0, 0]\nclass = labelride"] ;
+6 -> 7 ;
+8 [label="gini = 0.0\nsamples = 3\nvalue = [0, 3, 0, 0]\nclass = labelrun"] ;
+7 -> 8 ;
+9 [label="gini = 0.0\nsamples = 114\nvalue = [114, 0, 0, 0]\nclass = labelride"] ;
+7 -> 9 ;
+10 [label="gini = 0.0\nsamples = 100\nvalue = [0, 100, 0, 0]\nclass = labelrun"] ;
+6 -> 10 ;
+}

@@ -70,16 +70,16 @@ for milliseconds_per_instance in GRANULARITIES:
     # Get the resulting pandas data table
     dataset = dataset.data_table
 
-    # Plot the data
-    DataViz = VisualizeDataset(__file__)
-
-    # Boxplot
-    DataViz.plot_dataset_boxplot(dataset, ['acc_phone_x', 'acc_phone_y', 'acc_phone_z'])
-
-    # Plot all data
-    DataViz.plot_dataset(dataset, ['acc_', 'gyr_', 'mag_', 'loc_phone_', 'label'],
-                         ['like', 'like', 'like', 'like', 'like', 'like', 'like', 'like'],
-                         ['line', 'line', 'line', 'line', 'line', 'line', 'points', 'points'])
+    # # Plot the data
+    # DataViz = VisualizeDataset(__file__)
+    #
+    # # Boxplot
+    # DataViz.plot_dataset_boxplot(dataset, ['acc_phone_x', 'acc_phone_y', 'acc_phone_z'])
+    #
+    # # Plot all data
+    # DataViz.plot_dataset(dataset, ['acc_', 'gyr_', 'mag_', 'loc_phone_', 'label'],
+    #                      ['like', 'like', 'like', 'like', 'like', 'like', 'like', 'like'],
+    #                      ['line', 'line', 'line', 'line', 'line', 'line', 'points', 'points'])
 
     # And print a summary of the dataset.
     util.print_statistics(dataset)

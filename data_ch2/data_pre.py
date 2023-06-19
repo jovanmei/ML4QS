@@ -1,7 +1,7 @@
 import csv
 
 # Step 1: Read the CSV file
-with open('ch2_result.csv', 'r') as file:
+with open('raw_output/ch2_result_60.csv', 'r') as file:
     reader = csv.DictReader(file)
     rows = list(reader)
 
@@ -17,7 +17,7 @@ for row in rows_to_delete:
 
 # Step 4: Write the updated data to a new CSV file
 fieldnames = reader.fieldnames
-with open('output.csv', 'w', newline='') as file:
+with open('ch2_res_60.csv', 'w', newline='') as file:
     writer = csv.DictWriter(file, fieldnames=fieldnames)
     writer.writeheader()
     writer.writerows(rows)
